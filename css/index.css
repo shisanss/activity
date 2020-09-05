@@ -1,0 +1,211 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url(https://gd-pub.jinshujufiles.com/bgi/20171024174945_157f32?imageView2/2/w/1920);
+	background-position: top center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-size: 14px;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: square;
+	padding-left: 40px;
+}
+
+.time {
+	position: sticky;
+	font-size: 16px;
+	top: 0;
+	padding: 8px;
+	text-align: center;
+	z-index: 999;
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+.time>span {
+	background-color: #fff;
+	color: #333;
+	padding: 7px 14px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	opacity: 0.9;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.time i::before {
+	content: '\e8ec';
+	font-family: "gd-thin-icons";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+main {
+	text-align: center;
+}
+
+.wrap {
+	max-width: 700px;
+	width: 94%;
+	margin: 5px auto;
+	background-color: rgb(255, 255, 255);
+	border: 5px solid rgb(126, 68, 35);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+	text-align: left;
+}
+
+.wrap>img,
+.banner {
+	width: 100%;
+	display: block;
+}
+
+.header {
+	padding: 20px 15px 10px;
+	font-size: 15px;
+	color: #666;
+	border-bottom: 1px solid rgb(195, 201, 208);
+}
+
+.header>.title {
+	font-family: inherit;
+	font-size: 22px;
+	font-weight: normal;
+	color: rgb(126, 68, 35);
+}
+
+.h-top {
+	margin-top: 20px;
+}
+
+.h-strong {
+	color: #a52a2a;
+	font-size: 14px;
+}
+
+.form {
+	padding: 20px;
+}
+
+.form>p {
+	ont-family: inherit;
+	padding-bottom: 7px;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgb(126, 68, 35);
+}
+
+.checkbox .el-input__inner {
+	line-height: 28px;
+	height: 28px;
+}
+
+footer {
+	padding: 0 20px 20px;
+	font-size: 15px;
+	color: #666;
+	border-bottom: 1px solid rgb(195, 201, 208);
+}
+
+.submit {
+	box-sizing: border-box;
+	width: 100px;
+	margin: 30px auto;
+	display: block;
+}
+
+.hint {
+	width: 100vw;
+	height: 100vh;
+	padding: 30px;
+	box-sizing: border-box;
+	background: rgba(0, 0, 0, .7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0;
+}
+
+.hint>div {
+	max-width: 650px;
+	position: relative;
+}
+
+.hint span {
+	width: 10vw;
+	height: 10vw;
+	max-width: 70px;
+	max-height: 70px;
+	margin: auto;
+	border-radius: 100%;
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 2%;
+	z-index: 99;
+}
+
+.hint img {
+	width: 100%;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+	body {
+		background-image: url(https://gd-pub.jinshujufiles.com/bgi/20171024174945_157f32?imageView2/2/w/1440);
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	body {
+		background-image: url(https://gd-pub.jinshujufiles.com/bgi/20171024174945_157f32?imageView2/2/w/768);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	body {
+		background-image: url(https://gd-pub.jinshujufiles.com/bgi/20171024174945_157f32?imageView2/4);
+	}
+}
+
+@media (max-width: 575.98px) {
+	.el-checkbox {
+		width: 100%;
+		border: 1px solid #dfdfdf;
+		line-height: 28px;
+		padding: 5px 10px;
+		margin: 0;
+		display: block;
+	}
+
+	.el-checkbox:nth-of-type(n + 2) {
+		border-top: 0;
+	}
+
+	.submit {
+		width: calc(100% - 40px);
+	}
+}

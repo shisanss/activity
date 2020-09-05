@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html data-embedded="" lang="zh-CN" data-from-china="true">
+	<head>
+		<meta charset="utf-8">
+		<title>三宝国际民艺市集报名申请-秋月集·特别篇</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="description" content='为三宝国际民艺市集报名申请-秋月集·特别篇提交数据。  “若无闲事挂心头，便是人间好时节”   时间：2020年9月14日（周一）10：00...'>
+		<meta property="og:title" content='三宝国际民艺市集报名申请-秋月集·特别篇'>
+		<meta property="og:description" content='为三宝国际民艺市集报名申请-秋月集·特别篇提交数据。  “若无闲事挂心头，便是人间好时节”   时间：2020年9月14日（周一）10：00...'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" media="screen" href="https://gd-assets.jinshujucdn.com/assets/published-form-layout-04fcbea689db4a3a299adb0f59178f20c67f80b76af88b275c5b51a31507b2da.css" debug="false" />
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<main id="app">
+			<div class="time">
+				<span><i></i> <span>{{ time }}</span></span>
+			</div>
+			<div class="wrap">
+				<el-carousel autoplay trigger="click" :height="height">
+					<el-carousel-item v-for="item in list" :key="item">
+						<img class="banner" :src="item" >
+					</el-carousel-item>
+				</el-carousel>
+				<div class="header">
+					<p class="title">三宝国际民艺市集报名申请-秋月集·特别篇</p>
+					<p class="h-top h-strong"><strong>“若无闲事挂心头，便是人间好时节”</strong></p>
+					<p class="h-top"><strong class="h-strong">时间：</strong>2020年9月14日（周一）10：00开园</p>
+					<p><strong class="h-strong">地点：</strong>景德镇三宝国际陶艺村 三宝秘境</p>
+					<p class="h-top h-strong">线上报名 入园需进行体温检测 凭预约码入场</p>
+					<p class="h-top h-strong"><strong cl>摊主招募</strong></p>
+					<p>免费招募</p>
+					<p>数量：30</p>
+					<p class="h-top h-strong"><strong>摊主征集要求：</strong></p>
+					<ul>
+						<li>统一桌布风格/色系</li>
+						<li>陶瓷类作品要求原创非抄袭</li>
+						<li>饮食类需提供经营许可证</li>
+					</ul>
+				</div>
+				<el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="form">
+					<p>* 姓名 Name： (请填写2-20个字)</p>
+					<el-form-item prop="name">
+						<el-input placeholder="请填写姓名" v-model="ruleForm.name"></el-input>
+					</el-form-item>
+					<p>* 电话 Phone Number：</p>
+					<el-form-item prop="phone">
+						<el-input placeholder="请填写电话" v-model="ruleForm.phone"></el-input>
+					</el-form-item>
+					<p>* 作品类别 Kind of work：</p>
+					<el-form-item prop="type">
+						<el-checkbox-group v-model="ruleForm.type">
+							<el-checkbox label="陶瓷类" name="type"></el-checkbox>
+							<el-checkbox label="食品类" name="type"></el-checkbox>
+							<el-checkbox label="传统工艺类" name="type"></el-checkbox>
+							<el-checkbox label="织物" name="type"></el-checkbox>
+							<el-checkbox label="木制品" name="type"></el-checkbox>
+							<el-checkbox label="金属类" name="type"></el-checkbox>
+							<el-checkbox label="果蔬类" name="type"></el-checkbox>
+							<el-checkbox class="checkbox" label="其他" name="type">
+								其他 <el-input placeholder="请注明" v-model="text">
+							</el-checkbox>
+						</el-checkbox-group>
+					</el-form-item>
+					<p>* 作品介绍：</p>
+					<el-form-item prop="desc">
+						<el-input placeholder="请填写作品介绍" type="textarea" v-model="ruleForm.desc"></el-input>
+					</el-form-item>
+					<p>* 作品图片（10张）Photo of works：</p>
+					<el-form-item prop="fileList">
+						<el-upload
+							class="upload-demo"
+							action="https://jsonplaceholder.typicode.com/posts/"
+							:on-change="()=>{ruleForm.fileList.length++}"
+							:on-remove="()=>{ruleForm.fileList.length--}"
+							multiple
+							:auto-upload="false"
+							:file-list="ruleForm.fileList"
+							:limit="10"
+							list-type="picture">
+							<el-button size="small" type="primary">点击作品图片</el-button>
+							<div slot="tip" class="el-upload__tip">最多上传10张图片、限制每个20MB以内</div>
+						</el-upload>
+					</el-form-item>
+					<p>* 作品价格范围 Price range of work：</p>
+					<el-form-item prop="price">
+						<el-input placeholder="请填写作品价格范围" v-model="ruleForm.price"></el-input>
+					</el-form-item>
+				</el-form>
+				<footer>
+					<p class="h-strong"><strong>详询</strong></p>
+					<p>Tel:</p>
+					<p>19198325205（梅琳玉）</p>
+					<p>13320141514（大志）</p>
+				</footer>
+				<el-button class="submit" type="primary" @click="submitForm('ruleForm')">提交</el-button>
+			</div>
+			<div class="hint" :style="{zIndex: show ? 9 : -9,opacity: show ? 1 : 0}"><div><img src="img/result.png" ><span @click="hide"></span></div></div>
+		</main>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data() {
+				return {
+					time: '加载中',
+					temp: null,
+					list: ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg'],
+					height: '180px',
+					text: '',
+					show: false,
+					ruleForm: {
+						type: [],
+						fileList: []
+					},
+					rules: {
+						name: [{
+								required: true,
+								message: '请填写姓名',
+								trigger: 'blur'
+							},
+							{
+								min: 2,
+								max: 20,
+								message: '长度在 2 到 20 个字',
+								trigger: 'blur'
+							}
+						],
+						phone: [{
+							required: true,
+							message: '请填写电话',
+							trigger: 'blur'
+						}],
+						type: [{
+							type: 'array',
+							required: true,
+							message: '请至少选择一个作品类别',
+							trigger: 'change'
+						}],
+						desc: [{
+							required: true,
+							message: '请填写作品介绍',
+							trigger: 'blur'
+						}],
+						fileList: [{
+							type: 'array',
+							required: true,
+							message: '请至少上传一张作品图片',
+							trigger: 'change'
+						}],
+						price: [{
+							required: true,
+							message: '请填写作品价格范围',
+							trigger: 'blur'
+						}]
+					}
+				};
+			},
+			created() {
+				clearInterval(this.temp);
+				const start= new Date().getTime();
+				const end  = new Date('2020/09/11 10:00').getTime();
+				let t = (end - start) / 1000;
+				this.temp = setInterval(() => {
+					t--;
+					if (t > 0) {
+						const s = parseInt(t % 60);
+						const m = parseInt(t / 60 % 60);
+						const h = parseInt(t / 60 / 60 % 24);
+						const d = parseInt(t / 60 / 60 / 24);
+						this.time = `距结束 ${d}天 ${h < 10 ? '0' + h : h}:${m < 10 ? '0' + m : m}:${s < 10 ? '0' + s : s}`
+					} else {
+						this.time = '报名已结束';
+						clearInterval(this.temp);
+					}
+				}, 1000);
+				const clientWidth = document.body.clientWidth * 0.94;
+				this.height = ((clientWidth > 700 ? 700 : clientWidth) - 10) / 750 * 380 + 'px';
+			},
+			methods: {
+				submitForm(formName) {
+					this.$refs[formName].validate((valid) => {
+						if (valid) {
+							this.show = true;
+						} else {
+							return false;
+						}
+					});
+				},
+				hide() {
+					this.show = false;
+					this.$refs.ruleForm.resetFields();
+				}
+			}
+		})
+	</script>
+	</script>
+</html>
